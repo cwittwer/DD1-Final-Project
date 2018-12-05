@@ -46,7 +46,7 @@ module trafficLightTop(CLOCK_50, KEY, LED);
                    .lights_out(street_lights)); // FSM output connects to the LED lights
 
    assign LED = { street_lights[5:3],           // MSBs toggle east-west lights
-                  3'b0,                         // Leaving the middle LEDs unused
+                  4'b0,                         // Leaving the middle LEDs unused
                   street_lights[2:0]            // LSBs toggle north-south lights
                 };
 
